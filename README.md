@@ -37,7 +37,7 @@ sudo vi /etc/hosts
 ## Manipulation d'exemple du tutoriel 
 
 ## jouez sur les valeurs et regarder le cluster se modifier directement dans l'interface
-Tips : cloner ce repository 
+Tips : cloner ce repository afin de pouvoir jouer avec les valeurs.
 
 ```bash
 # Pointez argo sur le fichier "application.yaml" du repository source (vous devrez surcharger dans Argo Directement)
