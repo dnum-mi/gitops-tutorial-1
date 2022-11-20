@@ -14,7 +14,7 @@ spec:
         app: echoserver-application
     spec:
       containers:
-      - image: opsdockerimage/echoserver:1.10
+      - image: e2eteam/echoserver
         imagePullPolicy: Always
         name: echoserver-application
         ports:
