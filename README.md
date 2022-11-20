@@ -52,6 +52,8 @@ kubectl apply -f https://<votre-repo-url>/raw/application.yaml
 # vous devrez faire un commit entre chaque changement sur le fichier.
 # Argo se synchronise toute les 3 minutes, vous pouvez forcer avec le bouton "SYNC"
 
+# le service doit repondre à l'url suivante http://echo.fake-domain.local
+
 ```
 
 ![argo CD](https://raw.githubusercontent.com/dnum-mi/gitops-tutorial-1/main/argo%20CD.png)
