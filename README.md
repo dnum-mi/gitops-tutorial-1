@@ -1,4 +1,4 @@
-#### Ce tutoriel permet de tester le déploiment d'un flux gitops et jouer avec les paramètres.
+#### Ce tutoriel permet de tester le déploiment d'un flux gitops et manipuer un paramètre pour observer le déploiement.
 Cet example est décliné du cours de Techword with nana (vous êtes invités à le regarder) : https://www.youtube.com/watch?v=MeU5_k9ssrs
 
 ## Prérequis :
@@ -14,17 +14,17 @@ Disposer d'un cluster kubernetes avec un ingres controler installé.
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
-# access ArgoCD UI ( vous pouvez aussi utiliser un outils plus convivial tel que Lens https://k8slens.dev/ (à installer sur le poste))
-kubectl get svc -n argocd
-kubectl port-forward svc/argocd-server 8080:443 -n argocd
-#> il suffit de se rendre à l'url https://localhost:443
-
-# login with admin user and below token (as in documentation):
+# récupérer le mot de passe d'Argo qui a été créer automatiquement à l'installation
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 --decode && echo
 
-# you can change and delete init password
+# access ArgoCD UI 
+kubectl get svc -n argocd
+kubectl port-forward svc/argocd-server 8080:443 -n argocd
+#> il suffit de se rendre à l'url http://localhost:8080
 
-#Ajouter dans votre fichier /etc/hosts le nom de domaine utilisé : 
+#tips : vous pouvez aussi utiliser un outils plus convivial tel que Lens https://k8slens.dev/ (à installer sur votre ordinateur )
+
+# Comme le domaine n'existe pas, il est nécessaire d'ajouter dans votre fichier /etc/hosts le nom de domaine utilisé dans l'exemple. 
 
 sudo vi /etc/hosts
 <enter password>
