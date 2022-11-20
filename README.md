@@ -40,8 +40,13 @@ sudo vi /etc/hosts
 Tips : cloner ce repository 
 
 ```bash
-# Pointez argo sur le fichier "application.yaml" de votre repertoire
+# Pointez argo sur le fichier "application.yaml" du repository source (vous devrez surcharger dans Argo Directement)
+https://raw.githubusercontent.com/dnum-mi/gitops-tutorial-1/main/application.yaml
+# Pointez argo sur le fichier 'application.yaml' de votre repertoire et ensuite modifiez une valeur et observer dans l'interface de Argo le comportement.
 kubectl apply -f https://<votre-repo-url>/raw/application.yaml
+
+# activité : modifiez par exemple la valeur replicas de la ligne 7 dans le ficher 'deployment.yaml', par exemple passez de 'replicas: 3'  à  'replicas: 10'  puis revenez à 'replicas: 3', vous devrez faire un commit entre chaque changement.
+
 ```
 
 #### Links
