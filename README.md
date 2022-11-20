@@ -1,10 +1,11 @@
-#### Ce tutoriel permet de tester le déploiment d'un flux gitops et manipuer un paramètre pour observer le déploiement.
-Cet example est décliné du cours de Techword with nana (vous êtes invités à le regarder) : https://www.youtube.com/watch?v=MeU5_k9ssrs
+#### Ce tutoriel permet de tester le déploiment d'un flux gitops et manipuer un paramètre et observer l'impact sur le déploiement.
+Cet example est décliné du cours de Techword with nana (vous êtes invités à le regarder) </br> 
+https://www.youtube.com/watch?v=MeU5_k9ssrs
 
 ## Prérequis :
 Disposer d'un cluster kubernetes avec un ingres controler installé. 
-</br>L'exemple a été testé avec traefik sur un cluster kubernetes managé scaleway.
-</br>Note : Vous devriez pouvoir tester en local sur votre machine avec multipass + k3s (voir lien en bas de page, configuration non testée )
+</br>L'exemple a été testé avec le controleur d'ingres traefik sur un petit cluster kubernetes managé. ( www.scaleway.com )
+</br>Note : Vous devriez pouvoir tester en local sur votre machine avec multipass + k3s (voir lien en bas de page, cette configuration n'a pas été testée )
 </br>Il est nécessaire que votre cluster ait accès à internet pour récupérer la configuration .yamp ce répertoire ou un clone ainsi que la registry d'image (dockerhub).
 </br> vous devez avoir installer la commande kubectl et pointer sur votre cluster local ou distant ( non expliqué ici )
 </br>L'image utilisée permet juste de renvoyer la requête http.
@@ -41,7 +42,7 @@ Tips : cloner ce repository afin de pouvoir jouer avec les valeurs.
 
 ```bash
 # Pointez argo sur le fichier "application.yaml" du repository source (vous devrez surcharger dans Argo Directement)
-https://raw.githubusercontent.com/dnum-mi/gitops-tutorial-1/main/application.yaml
+kubectl apply -f https://raw.githubusercontent.com/dnum-mi/gitops-tutorial-1/main/application.yaml
 # Pointez argo sur le fichier 'application.yaml' de votre repertoire et ensuite modifiez une valeur
 # observez dans l'interface de Argo le comportement.
 kubectl apply -f https://<votre-repo-url>/raw/application.yaml
