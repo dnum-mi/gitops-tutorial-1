@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       #- image: opsdockerimage/echoserver:1.10 
-      - image: ealen/echo-server:0.7.0
+      - image: nginx:1.23.2
         imagePullPolicy: Always
         name: echoserver-application
         ports:
