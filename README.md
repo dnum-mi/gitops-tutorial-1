@@ -5,7 +5,7 @@ https://www.youtube.com/watch?v=MeU5_k9ssrs
 ## Prérequis :
 Disposer d'un cluster kubernetes avec un ingres controler installé. 
 </br>L'exemple a été testé avec le controleur d'ingres traefik sur un petit cluster kubernetes managé. ( www.scaleway.com )
-</br>Note : Vous devriez pouvoir tester en local sur votre machine avec multipass + k3s (voir lien en bas de page, cette configuration n'a pas été testée )
+</br>Note : Vous devriez pouvoir tester en local sur votre machine avec multipass + k3s (voir lien en bas de page, note cette configuration ne fonctionne pas sur processeur Arm (ex: M1) car l'image n'est pas compilée en multi architecture )
 </br>Il est nécessaire que votre cluster ait accès à internet pour récupérer la configuration .yamp ce répertoire ou un clone ainsi que la registry d'image (dockerhub).
 </br> vous devez avoir installer la commande kubectl et pointer sur votre cluster local ou distant ( non expliqué ici )
 </br>L'image utilisée permet juste de renvoyer la requête http.
@@ -53,6 +53,7 @@ kubectl apply -f https://<votre-repo-url>/raw/application.yaml
 # Argo se synchronise toute les 3 minutes, vous pouvez forcer avec le bouton "SYNC"
 
 # le service doit repondre à l'url suivante http://echo.fake-domain.local
+# note : l'ingress peut mettre quelques secondes - minutes à se mettre en place.
 
 ```
 
