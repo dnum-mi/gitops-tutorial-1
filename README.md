@@ -42,13 +42,18 @@ Tips : cloner ce repository afin de pouvoir jouer avec les valeurs.
 ```bash
 # Pointez argo sur le fichier "application.yaml" du repository source (vous devrez surcharger dans Argo Directement)
 https://raw.githubusercontent.com/dnum-mi/gitops-tutorial-1/main/application.yaml
-# Pointez argo sur le fichier 'application.yaml' de votre repertoire et ensuite modifiez une valeur et observer dans l'interface de Argo le comportement.
+# Pointez argo sur le fichier 'application.yaml' de votre repertoire et ensuite modifiez une valeur
+# observez dans l'interface de Argo le comportement.
 kubectl apply -f https://<votre-repo-url>/raw/application.yaml
 
-# activité : modifiez par exemple la valeur replicas de la ligne 7 dans le ficher 'deployment.yaml', par exemple passez de 'replicas: 3'  à  'replicas: 10'  puis revenez à 'replicas: 3', vous devrez faire un commit entre chaque changement.
+# activité : modifiez par exemple la valeur replicas de la ligne 7 dans le ficher 'deployment.yaml',
+# par exemple passez de 'replicas: 3'  à  'replicas: 10'  puis revenez à 'replicas: 3
+# vous devrez faire un commit entre chaque changement sur le fichier.
+# Argo se synchronise toute les 3 minutes, vous pouvez forcer avec le bouton "SYNC"
 
 ```
 
+![argo CD](https://raw.githubusercontent.com/dnum-mi/gitops-tutorial-1/main/argo%20CD.png)
 #### Links
 
 * Install Multipass + k3s : https://jyeee.medium.com/kubernetes-on-your-macos-laptop-with-multipass-k3s-and-rancher-2-4-6e9cbf013f58
