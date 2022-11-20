@@ -49,7 +49,7 @@ kubectl apply -f https://<votre-repo-url>/raw/application.yaml
 
 # activité : modifiez par exemple la valeur replicas de la ligne 7 dans le ficher 'deployment.yaml',
 # par exemple passez de 'replicas: 3'  à  'replicas: 10'  puis revenez à 'replicas: 3
-# vous devrez faire un commit entre chaque changement sur le fichier.
+# Vous devrez faire un commit entre chaque changement sur le fichier.
 # Argo se synchronise toute les 3 minutes, vous pouvez forcer avec le bouton "SYNC"
 
 # le service doit repondre à l'url suivante http://echo.fake-domain.local
