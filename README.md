@@ -1,4 +1,4 @@
-#### Ce tutoriel permet de tester le déploiment d'un flux gitops et manipuer un paramètre et observer l'impact sur le déploiement.
+#### Ce tutoriel permet de tester le déploiment d'un flux gitops et manipuler un paramètre et observer l'impact sur le déploiement.
 Cet example est décliné du cours de Techword with nana (vous êtes invités à le regarder) </br> 
 https://www.youtube.com/watch?v=MeU5_k9ssrs
 
