@@ -14,8 +14,8 @@ spec:
         app: echoserver-application
     spec:
       containers:
-      - image: opsdockerimage/echoserver:1.10 
-      #- image: nginxdemos/hello:0.3
+      #- image: opsdockerimage/echoserver:1.10 
+      - image: nginxdemos/hello:0.3
         imagePullPolicy: Always
         name: echoserver-application
         ports:
