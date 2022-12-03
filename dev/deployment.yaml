@@ -18,8 +18,9 @@ spec:
       #- image: nginxdemos/hello:0.3
       #- image: hashicorp/http-echo
       #- image: odeo/rootless-nginx
-      - image: quay.io/powercloud/http-echo
+      #- image: quay.io/powercloud/http-echo
       #- image: nginxinc/nginx-unprivileged
+      - image: docker.io/tobicolin/echo-server-rootless:latest
       
         imagePullPolicy: Always
         name: echoserver-application
