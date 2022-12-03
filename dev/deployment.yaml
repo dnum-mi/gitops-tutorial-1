@@ -20,7 +20,7 @@ spec:
       #- image: odeo/rootless-nginx
       #- image: quay.io/powercloud/http-echo
       #- image: nginxinc/nginx-unprivileged
-      - image: docker.io/tobicolin/echo-server-rootless:latest
+      - image: docker.io/tobicolin/echo-server-rootless
       
         imagePullPolicy: Always
         name: echoserver-application
