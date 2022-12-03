@@ -18,7 +18,7 @@ spec:
       #- image: nginxdemos/hello:0.3
       #- image: hashicorp/http-echo
       #- image: odeo/rootless-nginx
-      - image: hashicorp/http-echo
+      - image: nginxinc/nginx-unprivileged
       
         imagePullPolicy: Always
         name: echoserver-application
