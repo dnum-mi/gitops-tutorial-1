@@ -17,7 +17,8 @@ spec:
       #- image: opsdockerimage/echoserver:1.10 
       #- image: nginxdemos/hello:0.3
       #- image: hashicorp/http-echo
-      - image: odeo/rootless-nginx
+      #- image: odeo/rootless-nginx
+      - image: hashicorp/http-echo
       
         imagePullPolicy: Always
         name: echoserver-application
