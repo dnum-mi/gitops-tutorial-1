@@ -24,4 +24,3 @@ spec:
         name: echoserver-application
         ports:
         - containerPort: 8080
-
