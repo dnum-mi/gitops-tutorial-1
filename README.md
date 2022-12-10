@@ -7,7 +7,7 @@ Disposer d'un cluster kubernetes avec un ingres controler installé.
 </br>L'exemple a été testé avec le controleur d'ingres traefik sur un cluster kubernetes managé. https://www.scaleway.com
 </br>Note : Note cette configuration ne fonctionne pas sur processeur Arm (ex: M1) car l'image n'est pas compilée en multi architecture.
 </br>Le cluster doit accéder à internet pour récupérer la configuration .yaml, accéder à ce répertoire (ou la version clonée cf plus bas) ainsi que la registry d'image (dockerhub).
-</br>Vous devez avoir installer la commande kubectl qui pointe sur votre cluster local ou distant.
+</br>Vous devez avoir installer la commande kubectl qui pointe sur votre cluster local ou distant. ( A été testé sur cluster mutualisé de l'offre Scaleway et OpenShift )
 </br>L'image utilisée permet juste de renvoyer la requête http.
 
 ```bash
