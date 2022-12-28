@@ -6,7 +6,7 @@ metadata:
 
 spec:
   rules:
-  - host: "echo.fake-domain.local" 
+  - host: "gitops-tutorial.numerique-interieur.com" 
     http:
       paths:
         - path: /
