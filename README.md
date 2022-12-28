@@ -47,20 +47,26 @@ kubectl apply -f https://raw.githubusercontent.com/dnum-mi/gitops-tutorial/main/
 # Si vous créer l'application via l'interface d'ARGO CD
   Dans la section "GENERAL", indiquez : 
 
-  Application Name :: tutoriel-gitops
-  Project Name :: default
-  SYNC POLICY :: Manual
+    Application Name :: tutoriel-gitops
+    Project Name :: default
+    SYNC POLICY :: Manual
+  
+    AUTO-CREATE NAMESPACE :: case cochée ( permet de la création automatique du namespace )
 
   Dans la section "SOURCE", indiquez : 
 
-  Repository URL :: https://github.com/dnum-mi/gitops-tutorial GIT 
-  Revision/ Branches :: HEAD
-  Path :: dev
+    Repository URL :: https://github.com/dnum-mi/gitops-tutorial GIT 
+    Revision/ Branches :: HEAD
+    Path :: dev
 
   Dans la section "DESTINATION", indiquez : 
 
-  Cluster URL :: https://kubernetes.default.svc
-  Namespace : echoserver-ns
+    Cluster URL :: https://kubernetes.default.svc
+    Namespace : echoserver-ns
+    
+  Attention pour OpenShift, pensez à donner les droits à argoCd sur le namespace ( ici echoserver-ns ) :
+   
+    oc adm policy add-role-to-user admin system:serviceaccount:openshift-gitops:openshift-gitops-argocd-application-controller -n echoserver-ns
 
 # Pointez argo sur le fichier 'application.yaml' de votre repertoire et ensuite modifiez une valeur
 # observez dans l'interface de Argo le comportement.
