@@ -5,6 +5,9 @@ metadata:
   name: echoserver-ingress
 
 spec:
+  tlsSecurityProfile:
+    Intermediate: {}
+    type: Intermediate
   rules:
   - host: "gitops-tutorial.numerique-interieur.com" 
     http:
