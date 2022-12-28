@@ -42,7 +42,7 @@ Tips : cloner ce repository afin de pouvoir jouer avec les valeurs.
 
 ```bash
 # Pointez argo sur le fichier "application.yaml" du repository source (vous devrez surcharger dans Argo Directement)
-kubectl apply -f https://raw.githubusercontent.com/dnum-mi/gitops-tutorial-1/main/application.yaml
+kubectl apply -f https://raw.githubusercontent.com/dnum-mi/gitops-tutorial/main/application.yaml
 # Pointez argo sur le fichier 'application.yaml' de votre repertoire et ensuite modifiez une valeur
 # observez dans l'interface de Argo le comportement.
 kubectl apply -f https://<votre-repo-url>/raw/application.yaml
