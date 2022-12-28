@@ -3,7 +3,6 @@ kind: Ingress
 metadata:
   namespace: echoserver-ns
   name: echoserver-ingress
-
 spec:
   rules:
   - host: "echo.fake-domain.local" 
