@@ -43,6 +43,25 @@ Tips : cloner ce repository afin de pouvoir jouer avec les valeurs.
 ```bash
 # Pointez argo sur le fichier "application.yaml" du repository source (vous devrez surcharger dans Argo Directement)
 kubectl apply -f https://raw.githubusercontent.com/dnum-mi/gitops-tutorial/main/application.yaml
+
+# Si vous créer l'application via l'interface d'ARGO CD
+  Dans la section "GENERAL", indiquez : 
+
+  Application Name :: tutoriel-gitops
+  Project Name :: default
+  SYNC POLICY :: Manual
+
+  Dans la section "SOURCE", indiquez : 
+
+  Repository URL :: https://github.com/dnum-mi/gitops-tutorial GIT 
+  Revision/ Branches :: HEAD
+  Path :: dev
+
+  Dans la section "DESTINATION", indiquez : 
+
+  Cluster URL :: https://kubernetes.default.svc
+  Namespace : echoserver-ns
+
 # Pointez argo sur le fichier 'application.yaml' de votre repertoire et ensuite modifiez une valeur
 # observez dans l'interface de Argo le comportement.
 kubectl apply -f https://<votre-repo-url>/raw/application.yaml
