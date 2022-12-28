@@ -24,14 +24,6 @@ kubectl port-forward svc/argocd-server 8080:443 -n argocd
 #> il suffit de se rendre à l'url http://localhost:8080
 
 #tips : vous pouvez aussi utiliser un outils plus convivial tel que Lens https://k8slens.dev/ (à installer sur votre ordinateur )
-
-# Comme le domaine n'existe pas, il est nécessaire d'ajouter dans votre fichier /etc/hosts le nom de domaine utilisé dans l'exemple. 
-
-sudo vi /etc/hosts
-<enter password>
-#ajouter à la fin du fichier la ligne suivante
-<ip-of-your-cluster> echo.fake-domain.local
-
 ```
 </br>
 
@@ -77,9 +69,19 @@ kubectl apply -f https://<votre-repo-url>/raw/application.yaml
 # Vous devrez faire un commit entre chaque changement sur le fichier.
 # Argo se synchronise toute les 3 minutes, vous pouvez forcer avec le bouton "SYNC"
 
-# le service doit repondre à l'url suivante http://echo.fake-domain.local
+# le service doit repondre à l'url suivante http://echo.fake-domain.local ( domain non existant, cf plus bas )
 # note : l'ingress peut mettre quelques secondes - minutes à se mettre en place.
+```
 
+Comme le domaine n'existe pas, il est nécessaire d'ajouter le nom de domaine dans votre DNS privé 
+ou bien dans votre fichier local /etc/hosts ou C:\windows\system32\drivers\etc\hosts sous Windows?
+
+```
+# Sous Unix / MacOs
+  sudo vi /etc/hosts #<enter password>
+
+ # puis ajouter à la fin du fichier la ligne suivante
+  <ip-of-your-cluster> echo.fake-domain.local
 ```
 
 ![argo CD](https://raw.githubusercontent.com/dnum-mi/gitops-tutorial-1/main/argo%20CD.png)
